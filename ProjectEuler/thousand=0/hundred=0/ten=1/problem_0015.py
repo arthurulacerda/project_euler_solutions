@@ -3,8 +3,7 @@ import time
 from math import factorial as fat
 
 def nxn_grid_paths(n):
-    path_size = 2 * n
-    return int(fat(path_size) / (fat(n) * fat(path_size - n)))
+    return fat(2*n) / (fat(n)**2)
 
 start_time = time.time()
 print(nxn_grid_paths(20))
