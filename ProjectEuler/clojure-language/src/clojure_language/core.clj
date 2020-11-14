@@ -8,16 +8,13 @@
 (defn rem-zero? [x y] (= 0 (rem x y)))
 
 (defn next-prime
-  ([known-primes] (next-prime 
-                    known-primes 
-                    (+ 2 (last known-primes))))
-  ([known-primes possible-prime]
-   (if (some
-         #((partial rem-zero? possible-prime) %)
-         known-primes)
-     (next-prime known-primes
-                 (+ 2 possible-prime))
-     possible-prime)))
+  [known-primes possible-prime]
+  (if (some
+        #((partial rem-zero? possible-prime) %)
+        known-primes)
+    (recur known-primes
+             (+ 2 possible-prime))
+    possible-prime))
 
 (defn prime-seq
   ([]
