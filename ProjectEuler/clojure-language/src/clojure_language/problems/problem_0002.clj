@@ -1,10 +1,5 @@
-
-(ns project-euler.p.0002)
-
-(defn fib
-  ([]  (fib 1))
-  ([x]  (lazy-seq (cons x (fib x 2))))
-  ([x y] (lazy-seq (cons y (fib y (+ x y))))))
+(ns project-euler.p.0002
+  (:require [clojure-language.core :refer [fib]]))
 
 (reduce
   +
