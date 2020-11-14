@@ -1,4 +1,3 @@
-
 (ns project-euler.p.0001
   (:require [clojure.set :as set]))
 

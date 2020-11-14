@@ -1,4 +1,3 @@
-
 (ns project-euler.p.0004
   (:require [clojure.string :as s]))
 

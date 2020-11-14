@@ -7,7 +7,7 @@ def get_nth_prime(index_find):
     while True:
         for prime in prime_numbers:
             if val % prime == 0:
-                break;
+                break
         else:
             prime_index += 1
             if prime_index == index_find:

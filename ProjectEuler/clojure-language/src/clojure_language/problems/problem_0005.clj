@@ -1,10 +1,11 @@
-(ns project-euler.p.0005)
+(ns project-euler.p.0005
+  (:require [clojure-language.core :refer [rem-zero?]]))
 
 (defn evenly-divisible
   ([lower upper] (evenly-divisible lower upper upper))
   ([lower upper value]
    (if (every?
-         #(= 0 (rem value %)) 
+         #((partial rem-zero? value) %)
          (range lower (inc upper)))
      value
      (recur lower upper (+ value upper)))))
