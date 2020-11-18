@@ -1,6 +1,6 @@
 # https://projecteuler.net/problem=10
 
-def solution(upper)
+def solution(upper):
     primes_list = set(range(3, upper + 1, 2))
 
     for number in range(3, int(upper ** 0.5) + 1):
